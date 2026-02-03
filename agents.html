@@ -1,111 +1,136 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Autonomous Agents | Hivera</title>
-    <meta name="description" content="Meet the agents powering the future of work. From coding to marketing autonomy.">
+    <title>Autonomous Agents - Hivera</title>
+    <meta name="description" content="Explore top frameworks for building autonomous AI agents: LangGraph, CrewAI, AutoGen, and more.">
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#f0f9ff',
+                            100: '#e0f2fe',
+                            500: '#0ea5e9',
+                            600: '#0284c7',
+                            900: '#0c4a6e',
+                            950: '#082f49',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
-        body { font-family: 'Plus Jakarta Sans', sans-serif; scroll-behavior: smooth; }
-        .glass { background: rgba(255, 255, 255, 0.8); backdrop-filter: blur(8px); }
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .glass-nav {
+            background: rgba(15, 23, 42, 0.7);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .glass-card {
+            background: rgba(30, 41, 59, 0.4);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(12px);
+        }
     </style>
 </head>
-<body class="bg-white text-slate-900">
-    <nav class="fixed top-0 w-full z-50 glass border-b border-slate-100">
-        <div class="max-w-6xl mx-auto px-4 h-16 flex justify-between items-center">
-            <div class="flex items-center space-x-2">
-                <div class="w-8 h-8 bg-indigo-600 rounded-lg flex items-center justify-center">
-                    <i class="fas fa-hive text-white text-xs"></i>
+<body class="bg-slate-950 text-slate-300 antialiased">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 glass-nav">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex-shrink-0 flex items-center gap-2">
+                     <a href="index.html" class="flex items-center gap-2">
+                        <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-brand-500 to-violet-600 flex items-center justify-center text-white font-bold">H</div>
+                        <span class="text-white font-bold text-xl tracking-tight">Hivera</span>
+                    </a>
                 </div>
-                <span class="text-xl font-bold tracking-tight text-slate-900">Hivera</span>
-            </div>
-            <div class="hidden md:flex items-center space-x-6 text-sm font-semibold text-slate-600">
-                <a href="tools.html" class="hover:text-indigo-600 transition">Tools</a>
-                <a href="mcp.html" class="hover:text-indigo-600 transition">MCPs</a>
-                <a href="agents.html" class="hover:text-indigo-600 transition">Agents</a>
-                <a href="prompting.html" class="hover:text-indigo-600 transition">Prompting</a>
-                <a href="blog.html" class="hover:text-indigo-600 transition">Blog</a>
-                <a href="index.html#premium" class="text-indigo-600 hover:text-indigo-700 transition font-bold flex items-center">
-                    <i class="fas fa-crown mr-1.5"></i> Premium
-                </a>
-                <a href="index.html#newsletter" class="bg-indigo-600 text-white px-5 py-2 rounded-full hover:bg-indigo-700 transition shadow-lg shadow-indigo-100">
-                    Join Hivera
-                </a>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="index.html" class="text-slate-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">Home</a>
+                        <a href="tools.html" class="text-slate-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">Tools</a>
+                        <a href="mcp.html" class="text-slate-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">MCP</a>
+                        <a href="agents.html" class="bg-brand-500/10 text-brand-400 px-3 py-2 rounded-md text-sm font-medium transition-colors">Agents</a>
+                        <a href="prompting.html" class="text-slate-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">Prompting</a>
+                        <a href="blog.html" class="text-slate-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">Blog</a>
+                    </div>
+                </div>
+                <div>
+                     <a href="#" class="bg-white text-slate-900 hover:bg-slate-200 px-4 py-2 rounded-full text-sm font-semibold transition-colors">Subscribe</a>
+                </div>
             </div>
         </div>
     </nav>
 
-    <main class="max-w-4xl mx-auto px-4 pt-32 pb-20">
-        <header class="mb-16">
-            <h1 class="text-5xl font-extrabold mb-4">Autonomous Agents</h1>
-            <p class="text-xl text-slate-600">The shift from "AI assistants" to "AI colleagues." Explore the agents redefining roles.</p>
-        </header>
+    <!-- Header -->
+    <header class="pt-32 pb-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <h1 class="text-4xl md:text-5xl font-bold text-white mb-6">Build Autonomous <span class="text-brand-500">Systems</span></h1>
+        <p class="text-xl text-slate-400 max-w-3xl">Architectures and frameworks for creating AI agents that plan, execute, and collaborate.</p>
+    </header>
 
-        <div class="grid md:grid-cols-2 gap-8">
-            <!-- Agent 1 -->
-            <div class="p-8 bg-slate-900 text-white rounded-[2rem] shadow-xl">
-                <div class="w-12 h-12 bg-indigo-600 rounded-xl flex items-center justify-center mb-6">
-                    <i class="fas fa-code"></i>
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
+            <!-- Framework 1 -->
+            <div class="glass-card p-8 rounded-2xl hover:border-brand-500/50 transition-all">
+                <div class="h-12 w-12 rounded-full bg-orange-500/20 text-orange-400 flex items-center justify-center mb-6">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path></svg>
                 </div>
-                <h3 class="text-2xl font-bold mb-4">The Architect</h3>
-                <p class="text-slate-400 mb-6 text-sm leading-relaxed">A specialized OpenClaw agent designed for codebase mapping and system design. It can refactor entire directories while maintaining 100% test coverage.</p>
-                <ul class="space-y-2 text-xs font-medium text-indigo-300">
-                    <li><i class="fas fa-check mr-2"></i> Legacy Code Refactoring</li>
-                    <li><i class="fas fa-check mr-2"></i> Tech Debt Auditing</li>
-                    <li><i class="fas fa-check mr-2"></i> PR Review Automation</li>
-                </ul>
+                <h3 class="text-2xl font-bold text-white mb-2">LangGraph</h3>
+                <p class="text-slate-400 mb-6">Stateful, multi-actor applications with LLMs. Build cycles, branching, and persistence into your agent workflows.</p>
+                <div class="flex gap-2">
+                    <span class="text-xs bg-slate-800 border border-slate-700 px-2 py-1 rounded text-slate-300">Python</span>
+                    <span class="text-xs bg-slate-800 border border-slate-700 px-2 py-1 rounded text-slate-300">JS</span>
+                </div>
             </div>
 
-            <!-- Agent 2 -->
-            <div class="p-8 bg-white border border-slate-100 rounded-[2rem] shadow-sm">
-                <div class="w-12 h-12 bg-slate-100 text-slate-900 rounded-xl flex items-center justify-center mb-6">
-                    <i class="fas fa-chart-line"></i>
+            <!-- Framework 2 -->
+            <div class="glass-card p-8 rounded-2xl hover:border-brand-500/50 transition-all">
+                <div class="h-12 w-12 rounded-full bg-blue-500/20 text-blue-400 flex items-center justify-center mb-6">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
                 </div>
-                <h3 class="text-2xl font-bold mb-4">The Growth Hacker</h3>
-                <p class="text-slate-500 mb-6 text-sm leading-relaxed">Autonomous marketing agent that handles SEO, Twitter content cycles, and landing page A/B testing based on real user data.</p>
-                <ul class="space-y-2 text-xs font-medium text-slate-400">
-                    <li><i class="fas fa-check mr-2 text-indigo-500"></i> Keyword Research</li>
-                    <li><i class="fas fa-check mr-2 text-indigo-500"></i> Auto-Posting (X/LinkedIn)</li>
-                    <li><i class="fas fa-check mr-2 text-indigo-500"></i> Lead Magnet Generation</li>
-                </ul>
+                <h3 class="text-2xl font-bold text-white mb-2">CrewAI</h3>
+                <p class="text-slate-400 mb-6">Orchestrate role-playing autonomous AI agents. Define specific roles, goals, and backstories for better collaboration.</p>
+                <div class="flex gap-2">
+                    <span class="text-xs bg-slate-800 border border-slate-700 px-2 py-1 rounded text-slate-300">Orchestration</span>
+                    <span class="text-xs bg-slate-800 border border-slate-700 px-2 py-1 rounded text-slate-300">Role-Playing</span>
+                </div>
+            </div>
+
+            <!-- Framework 3 -->
+            <div class="glass-card p-8 rounded-2xl hover:border-brand-500/50 transition-all">
+                <div class="h-12 w-12 rounded-full bg-green-500/20 text-green-400 flex items-center justify-center mb-6">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                </div>
+                <h3 class="text-2xl font-bold text-white mb-2">AutoGen</h3>
+                <p class="text-slate-400 mb-6">Microsoft's framework for enabling next-gen LLM applications with multiple agents that can converse with each other.</p>
+                <div class="flex gap-2">
+                    <span class="text-xs bg-slate-800 border border-slate-700 px-2 py-1 rounded text-slate-300">Conversational</span>
+                    <span class="text-xs bg-slate-800 border border-slate-700 px-2 py-1 rounded text-slate-300">Microsoft</span>
+                </div>
             </div>
         </div>
 
-        <section class="mt-32">
-            <h2 class="text-3xl font-bold mb-12 text-center">How to Deploy</h2>
-            <div class="space-y-8">
-                <div class="flex items-start space-x-6">
-                    <div class="flex-shrink-0 w-10 h-10 bg-indigo-50 text-indigo-600 rounded-full flex items-center justify-center font-bold">1</div>
-                    <div>
-                        <h4 class="font-bold mb-2">Install OpenClaw</h4>
-                        <p class="text-slate-600 text-sm">The base platform for agent execution and resource management.</p>
-                    </div>
-                </div>
-                <div class="flex items-start space-x-6">
-                    <div class="flex-shrink-0 w-10 h-10 bg-indigo-50 text-indigo-600 rounded-full flex items-center justify-center font-bold">2</div>
-                    <div>
-                        <h4 class="font-bold mb-2">Configure MCPs</h4>
-                        <p class="text-slate-600 text-sm">Give your agents "eyes and ears" by connecting them to your files, Slack, and APIs.</p>
-                    </div>
-                </div>
-                <div class="flex items-start space-x-6">
-                    <div class="flex-shrink-0 w-10 h-10 bg-indigo-50 text-indigo-600 rounded-full flex items-center justify-center font-bold">3</div>
-                    <div>
-                        <h4 class="font-bold mb-2">Initialize Goal</h4>
-                        <p class="text-slate-600 text-sm">Set the top-level mission. The agent will handle sub-tasking and execution.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
     </main>
 
-    <footer class="bg-slate-50 border-t border-slate-100 py-16">
-        <div class="max-w-6xl mx-auto px-4 text-center">
-            <p class="text-sm text-slate-500">&copy; 2026 Hivera. All rights reserved.</p>
+    <!-- Footer -->
+    <footer class="border-t border-slate-800 bg-slate-950 pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <p class="text-slate-500 text-sm">© 2026 Hivera AI. All rights reserved.</p>
+            </div>
         </div>
     </footer>
+
 </body>
 </html>

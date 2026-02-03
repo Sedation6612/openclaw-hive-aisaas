@@ -1,318 +1,193 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Top 5 AI Dev Tools for 2026 | Hivera - Orchestrating Intelligence</title>
-    
-    <!-- SEO Optimization -->
-    <meta name="description" content="Discover the top 5 AI development tools defining 2026. From GitHub Copilot Next to OpenClaw autonomous agents, learn how to build the ultimate AI SaaS stack with Hivera.">
-    <link rel="canonical" href="https://hivera.digital/">
-    
-    <!-- Open Graph / social -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://hivera.digital/">
-    <meta property="og:title" content="Top 5 AI Dev Tools for 2026 | Hivera">
-    <meta property="og:description" content="Build faster with 2026's most powerful AI development tools. Curated by Hivera.">
-    <meta property="og:image" content="https://hivera.digital/og-image.jpg">
-
-    <!-- Schema.org Script -->
+    <title>Hivera - AI SaaS, MCP & Agents Ecosystem</title>
+    <meta name="description" content="The ultimate resource for AI developers. Discover the best AI tools, MCP servers, autonomous agents, and prompting guides for 2026.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#f0f9ff',
+                            100: '#e0f2fe',
+                            500: '#0ea5e9',
+                            600: '#0284c7',
+                            900: '#0c4a6e',
+                            950: '#082f49',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .glass-nav {
+            background: rgba(15, 23, 42, 0.7);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .glass-card {
+            background: rgba(30, 41, 59, 0.4);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(12px);
+        }
+        .hero-glow {
+            background: radial-gradient(circle at 50% 50%, rgba(14, 165, 233, 0.15), transparent 70%);
+        }
+    </style>
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "Article",
-      "headline": "The Future of Code: Top 5 AI Dev Tools for 2026",
-      "description": "Orchestrating intelligence with the best AI development environment tools of 2026.",
-      "author": {
-        "@type": "Organization",
-        "name": "Hivera"
-      },
-      "publisher": {
-        "@type": "Organization",
-        "name": "Hivera",
-        "logo": {
-          "@type": "ImageObject",
-          "url": "https://hivera.digital/logo.png"
-        }
-      },
-      "datePublished": "2026-02-02"
+      "@type": "WebSite",
+      "name": "Hivera",
+      "url": "https://hivera.ai",
+      "description": "The ultimate resource for AI developers, MCP protocols, and autonomous agents."
     }
     </script>
-
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
-        body { font-family: 'Plus Jakarta Sans', sans-serif; scroll-behavior: smooth; }
-        .glass { background: rgba(255, 255, 255, 0.8); backdrop-filter: blur(8px); }
-        .hero-gradient { background: radial-gradient(circle at top right, #e0e7ff 0%, #ffffff 100%); }
-    </style>
 </head>
-<body class="bg-white text-slate-900 selection:bg-indigo-100 selection:text-indigo-900">
+<body class="bg-slate-950 text-slate-300 antialiased selection:bg-brand-500 selection:text-white">
 
-    <!-- Sticky Navigation -->
-    <nav class="fixed top-0 w-full z-50 glass border-b border-slate-100">
-        <div class="max-w-6xl mx-auto px-4 h-16 flex justify-between items-center">
-            <div class="flex items-center space-x-2">
-                <div class="w-8 h-8 bg-indigo-600 rounded-lg flex items-center justify-center">
-                    <i class="fas fa-hive text-white text-xs"></i>
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 glass-nav transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex-shrink-0 flex items-center gap-2">
+                    <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-brand-500 to-violet-600 flex items-center justify-center text-white font-bold">H</div>
+                    <span class="text-white font-bold text-xl tracking-tight">Hivera</span>
                 </div>
-                <span class="text-xl font-bold tracking-tight text-slate-900">Hivera</span>
-            </div>
-            <div class="hidden md:flex items-center space-x-6 text-sm font-semibold text-slate-600">
-                <a href="tools.html" class="hover:text-indigo-600 transition">Tools</a>
-                <a href="mcp.html" class="hover:text-indigo-600 transition">MCPs</a>
-                <a href="agents.html" class="hover:text-indigo-600 transition">Agents</a>
-                <a href="prompting.html" class="hover:text-indigo-600 transition">Prompting</a>
-                <a href="blog.html" class="hover:text-indigo-600 transition">Blog</a>
-                <a href="index.html#premium" class="text-indigo-600 hover:text-indigo-700 transition font-bold flex items-center">
-                    <i class="fas fa-crown mr-1.5"></i> Premium
-                </a>
-                <a href="index.html#newsletter" class="bg-indigo-600 text-white px-5 py-2 rounded-full hover:bg-indigo-700 transition shadow-lg shadow-indigo-100">
-                    Join Hivera
-                </a>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="index.html" class="text-white px-3 py-2 rounded-md text-sm font-medium hover:text-brand-400 transition-colors">Home</a>
+                        <a href="tools.html" class="text-slate-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">Tools</a>
+                        <a href="mcp.html" class="text-slate-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">MCP</a>
+                        <a href="agents.html" class="text-slate-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">Agents</a>
+                        <a href="prompting.html" class="text-slate-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">Prompting</a>
+                        <a href="blog.html" class="text-slate-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">Blog</a>
+                    </div>
+                </div>
+                <div>
+                    <a href="#" class="bg-white text-slate-900 hover:bg-slate-200 px-4 py-2 rounded-full text-sm font-semibold transition-colors">Subscribe</a>
+                </div>
             </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <header class="pt-32 pb-20 hero-gradient">
-        <div class="max-w-4xl mx-auto px-4 text-center">
-            <span class="inline-block px-3 py-1 bg-indigo-50 text-indigo-700 text-xs font-extrabold tracking-widest uppercase rounded-full mb-4">
-                Exclusive Content: February 2026
-            </span>
-            <h1 class="text-5xl md:text-6xl font-extrabold tracking-tight text-slate-900 mb-6 leading-tight">
-                Orchestrate <span class="bg-clip-text text-transparent bg-gradient-to-r from-indigo-600 to-violet-600">Pure Intelligence.</span>
+    <section class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden">
+        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full hero-glow -z-10 pointer-events-none"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-5xl md:text-7xl font-bold text-white tracking-tight mb-6">
+                The Operating System for <br>
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-400 to-violet-400">AI Engineers</span>
             </h1>
-            <p class="text-xl text-slate-600 mb-10 max-w-2xl mx-auto">
-                Stop writing code manually. Start commanding agents. These top 5 tools are defining the 2026 development workflows.
+            <p class="mt-4 max-w-2xl mx-auto text-xl text-slate-400 mb-10">
+                Master the AI stack. Discover verified MCP servers, high-performance agents, and engineering-grade prompts.
             </p>
-            <div id="hero-cta" class="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-4">
-                <a href="#tools" class="w-full sm:w-auto bg-slate-900 text-white px-8 py-4 rounded-2xl font-bold hover:bg-slate-800 transition shadow-xl">
-                    Explore Tool Stack
+            <div class="flex justify-center gap-4">
+                <a href="tools.html" class="bg-brand-600 hover:bg-brand-500 text-white px-8 py-3 rounded-lg font-semibold text-lg transition-all shadow-[0_0_20px_rgba(14,165,233,0.3)] hover:shadow-[0_0_30px_rgba(14,165,233,0.5)]">Explore Tools</a>
+                <a href="mcp.html" class="glass-card hover:bg-slate-800 text-white px-8 py-3 rounded-lg font-semibold text-lg transition-all border border-slate-700">Browse MCPs</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bento Grid Navigation -->
+    <section class="py-20 bg-slate-950">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Card 1 -->
+                <a href="mcp.html" class="glass-card p-8 rounded-2xl hover:border-brand-500/50 transition-all group relative overflow-hidden">
+                    <div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
+                        <svg class="w-24 h-24 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path></svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-2">MCP Protocol</h3>
+                    <p class="text-slate-400">Standardizing context for LLMs. Browse our registry of verified MCP servers.</p>
                 </a>
-                <a href="#newsletter" class="w-full sm:w-auto bg-white text-indigo-600 border border-indigo-100 px-8 py-4 rounded-2xl font-bold hover:border-indigo-200 transition">
-                    Get Weekly Insights
+                 <!-- Card 2 -->
+                <a href="agents.html" class="glass-card p-8 rounded-2xl hover:border-brand-500/50 transition-all group relative overflow-hidden md:col-span-2">
+                    <div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
+                        <svg class="w-24 h-24 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-2">Autonomous Agents</h3>
+                    <p class="text-slate-400">Frameworks and blueprints for building agents that work while you sleep.</p>
+                </a>
+                <!-- Card 3 -->
+                <a href="tools.html" class="glass-card p-8 rounded-2xl hover:border-brand-500/50 transition-all group relative overflow-hidden md:col-span-2">
+                    <div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
+                        <svg class="w-24 h-24 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path></svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-2">Developer Tools</h3>
+                    <p class="text-slate-400">The essential stack for 2026. IDEs, extensions, and libraries for AI-native engineering.</p>
+                </a>
+                <!-- Card 4 -->
+                <a href="prompting.html" class="glass-card p-8 rounded-2xl hover:border-brand-500/50 transition-all group relative overflow-hidden">
+                    <div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
+                        <svg class="w-24 h-24 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z"></path></svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-2">Prompt Engineering</h3>
+                    <p class="text-slate-400">Advanced techniques: Chain-of-Thought, Tree-of-Thought, and system prompts.</p>
                 </a>
             </div>
         </div>
-    </header>
+    </section>
 
-    <main class="max-w-4xl mx-auto px-4 pb-20">
-        <!-- Ad Slot: Top Wrapper -->
-        <div class="mb-16 p-4 border-2 border-dashed border-slate-100 rounded-2xl bg-slate-50 text-center">
-            <p class="text-[10px] uppercase font-bold text-slate-400 tracking-widest mb-2">Sponsored Partner</p>
-            <div id="affiliate-rotator-top" class="text-indigo-600 font-bold hover:underline cursor-pointer">
-                Featured Today: OpenClaw
-            </div>
-        </div>
-
-        <!-- Article -->
-        <article id="tools" class="prose prose-indigo prose-lg mx-auto">
-            <div class="space-y-24">
-                
-                <!-- Tool 1 -->
-                <section class="group">
-                    <div class="flex items-center space-x-3 mb-6">
-                        <span class="text-4xl font-black text-slate-200 group-hover:text-indigo-100 transition">01.</span>
-                        <h2 class="text-3xl font-bold text-slate-900 !m-0">GitHub Copilot Next</h2>
-                    </div>
-                    <p class="text-slate-600 leading-relaxed">
-                        Copilot has evolved into an **Autonomous Organization Partner**. It doesn't just suggest code; it analyzes your company's entire legacy architecture and automatically flags technical debt before you even open a branch.
-                    </p>
-                    <div class="mt-6 p-6 bg-indigo-50 rounded-2xl border border-indigo-100">
-                        <h4 class="text-indigo-900 font-bold mb-2 flex items-center">
-                            <i class="fas fa-lightbulb mr-2 text-indigo-500"></i> Hivera Insider Tip
-                        </h4>
-                        <p class="text-sm text-indigo-800">Use Copilot's new `/diagram` command to instantly export Mermaid.js logic for documentation. Saving devs 4+ hours per sprint.</p>
-                    </div>
-                </section>
-
-                <!-- Tool 2 -->
-                <section class="group">
-                    <div class="flex items-center space-x-3 mb-6">
-                        <span class="text-4xl font-black text-slate-200 group-hover:text-indigo-100 transition">02.</span>
-                        <h2 class="text-3xl font-bold text-slate-900 !m-0">Replit Agent</h2>
-                    </div>
-                    <p class="text-slate-600 leading-relaxed">
-                        The ultimate prototyping weapon. In 2026, Replit Agent isn't just a chatbot—it's a fleet. It can spin up multiservice backends, manage Docker orchestration, and set up your initial CI/CD pipeline from a single natural language description.
-                    </p>
-                </section>
-
-                <!-- Tool 3 -->
-                <section class="group">
-                    <div class="flex items-center space-x-3 mb-6">
-                        <span class="text-4xl font-black text-slate-200 group-hover:text-indigo-100 transition">03.</span>
-                        <h2 class="text-3xl font-bold text-slate-900 !m-0">Cursor</h2>
-                    </div>
-                    <p class="text-slate-600 leading-relaxed">
-                        Still the gold standard for "Flow State." Cursor’s native 2026 integration with **o3 and Claude 4** models allows it to "hallucinate-proof" complex refactors by running shadow tests in the background as you type.
-                    </p>
-                </section>
-
-                <!-- Lead Gen Box -->
-                <section id="newsletter" class="bg-indigo-600 rounded-[2rem] p-10 text-white shadow-2xl shadow-indigo-200 relative overflow-hidden">
-                    <div class="absolute top-0 right-0 p-8 opacity-10">
-                        <i class="fas fa-paper-plane text-8xl"></i>
-                    </div>
-                    <div class="relative z-10">
-                        <h3 class="text-3xl font-bold mb-4">Escape the Tutorial Loop.</h3>
-                        <p class="text-indigo-100 mb-8 max-w-lg">Join 45,000+ AI engineers getting the exact prompts and tool stacks used by the top 1% of SaaS builders.</p>
-                        <form class="flex flex-col sm:flex-row space-y-3 sm:space-y-0 sm:space-x-3">
-                            <input type="email" placeholder="dev@example.com" class="flex-grow px-6 py-4 rounded-xl text-slate-900 font-medium focus:ring-4 focus:ring-indigo-300 outline-none" required>
-                            <button type="submit" class="bg-slate-900 px-8 py-4 rounded-xl font-bold hover:bg-slate-800 transition">Join Free</button>
-                        </form>
-                        <p class="text-[10px] mt-4 text-indigo-200 uppercase tracking-widest font-bold">No spam. Only high-alpha tool drops.</p>
-                    </div>
-                </section>
-
-                <!-- Tool 4 -->
-                <section class="group">
-                    <div class="flex items-center space-x-3 mb-6">
-                        <span class="text-4xl font-black text-slate-200 group-hover:text-indigo-100 transition">04.</span>
-                        <h2 class="text-3xl font-bold text-slate-900 !m-0">Vercel V0</h2>
-                    </div>
-                    <p class="text-slate-600 leading-relaxed">
-                        UI is now a solved problem. V0 in 2026 doesn't just give you components; it wires up your state management, API routes, and analytics based on a screenshot or a sketch.
-                    </p>
-                </section>
-
-                <!-- Tool 5 (The Big One) -->
-                <section class="group">
-                    <div class="flex items-center space-x-3 mb-6">
-                        <span class="text-4xl font-black text-slate-200 group-hover:text-indigo-100 transition">05.</span>
-                        <h2 class="text-3xl font-bold text-slate-900 !m-0 italic">OpenClaw</h2>
-                    </div>
-                    <p class="text-slate-600 leading-relaxed">
-                        The platform that makes all of this work together. OpenClaw provides the **Autonomous Glue**—the MCP-driven infrastructure that allows your toolchain to talk to itself. It’s what powers the agents behind the curtain.
-                    </p>
-                </section>
-            </div>
-        </article>
-
-        <!-- Interactive Tool: ROI Calc -->
-        <section id="calculator" class="mt-32 p-10 bg-slate-900 rounded-[2rem] text-white">
-            <h3 class="text-2xl font-bold mb-8 text-center">AI Tool Stack ROI Calculator</h3>
-            <div class="grid md:grid-cols-2 gap-10">
-                <div class="space-y-6">
-                    <div>
-                        <label class="block text-sm font-bold text-slate-400 mb-2 uppercase tracking-wide">Developer Hourly Rate ($)</label>
-                        <input type="number" id="calc-rate" value="120" class="w-full bg-slate-800 border border-slate-700 px-4 py-3 rounded-lg text-white">
-                    </div>
-                    <div>
-                        <label class="block text-sm font-bold text-slate-400 mb-2 uppercase tracking-wide">Hours Saved Per Week</label>
-                        <input type="number" id="calc-hours" value="15" class="w-full bg-slate-800 border border-slate-700 px-4 py-3 rounded-lg text-white">
-                    </div>
-                </div>
-                <div class="bg-indigo-600 rounded-2xl p-8 flex flex-col justify-center items-center">
-                    <p class="text-sm font-bold text-indigo-100 uppercase mb-2">Annualized Savings</p>
-                    <div id="calc-result" class="text-4xl font-black">$93,600</div>
-                    <p class="text-xs mt-4 text-indigo-200 italic">Maximize profit by orchestrating agents.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Paywall Section -->
-        <section id="premium" class="mt-32 text-center">
-            <h3 class="text-3xl font-bold mb-4">Unlock the Full 2026 Tool Matrix</h3>
-            <p class="text-slate-600 mb-10 max-w-lg mx-auto">Get access to 50+ detailed tool teardowns, configuration JSONs, and OpenClaw scripts.</p>
-            <div class="relative p-1 bg-gradient-to-r from-indigo-500 to-violet-500 rounded-3xl max-w-md mx-auto shadow-2xl">
-                <div class="bg-white rounded-[1.4rem] p-10">
-                    <div class="text-4xl font-extrabold text-slate-900 mb-2">$9<span class="text-sm text-slate-500">/mo</span></div>
-                    <p class="text-slate-500 text-sm mb-8">Billed annually. Full Hive access included.</p>
-                    <ul class="text-left space-y-4 mb-10 text-sm font-medium text-slate-600">
-                        <li><i class="fas fa-check text-indigo-500 mr-2"></i> All Pro Articles</li>
-                        <li><i class="fas fa-check text-indigo-500 mr-2"></i> OpenClaw Skill Blueprints</li>
-                        <li><i class="fas fa-check text-indigo-500 mr-2"></i> Private Discord Access</li>
+    <!-- Footer -->
+    <footer class="border-t border-slate-800 bg-slate-950 pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12">
+                <div>
+                    <h4 class="text-white font-bold mb-4">Hivera</h4>
+                    <ul class="space-y-2 text-slate-400 text-sm">
+                        <li><a href="#" class="hover:text-brand-400">About</a></li>
+                        <li><a href="#" class="hover:text-brand-400">Careers</a></li>
+                        <li><a href="#" class="hover:text-brand-400">Contact</a></li>
                     </ul>
-                    <button onclick="alert('Proceeding to Stripe Test Mode...')" class="w-full bg-indigo-600 text-white py-4 rounded-xl font-bold hover:bg-indigo-700 transition">
-                        Get Instant Access
-                    </button>
                 </div>
-            </div>
-        </section>
-
-    </main>
-
-    <footer class="bg-slate-50 border-t border-slate-100 py-16">
-        <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-4 gap-12">
-            <div class="col-span-2">
-                <div class="flex items-center space-x-2 mb-6">
-                    <div class="w-6 h-6 bg-indigo-600 rounded flex items-center justify-center">
-                        <i class="fas fa-hive text-white text-[10px]"></i>
+                <div>
+                    <h4 class="text-white font-bold mb-4">Resources</h4>
+                    <ul class="space-y-2 text-slate-400 text-sm">
+                        <li><a href="mcp.html" class="hover:text-brand-400">MCP Protocol</a></li>
+                        <li><a href="agents.html" class="hover:text-brand-400">Agents</a></li>
+                        <li><a href="blog.html" class="hover:text-brand-400">Blog</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-4">Legal</h4>
+                    <ul class="space-y-2 text-slate-400 text-sm">
+                        <li><a href="#" class="hover:text-brand-400">Privacy</a></li>
+                        <li><a href="#" class="hover:text-brand-400">Terms</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-4">Connect</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-slate-400 hover:text-white transition-colors">
+                           <span class="sr-only">GitHub</span>
+                           <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"></path></svg>
+                        </a>
                     </div>
-                    <span class="text-lg font-bold tracking-tight text-slate-900">Hivera</span>
                 </div>
-                <p class="text-slate-500 text-sm max-w-xs leading-relaxed">
-                    The leading intelligence source for AI-first developers building the future of software with Hivera in 2026.
-                </p>
             </div>
-            <div>
-                <h4 class="font-bold text-slate-900 mb-6 uppercase text-xs tracking-widest">Resources</h4>
-                <ul class="space-y-4 text-sm text-slate-500">
-                    <li><a href="tools.html" class="hover:text-indigo-600 transition">Tools</a></li>
-                    <li><a href="guides.html" class="hover:text-indigo-600 transition">Guides</a></li>
-                    <li><a href="blog.html" class="hover:text-indigo-600 transition">Blog</a></li>
-                    <li><a href="#" class="hover:text-indigo-600 transition">OpenClaw SDK</a></li>
-                </ul>
-            </div>
-            <div>
-                <h4 class="font-bold text-slate-900 mb-6 uppercase text-xs tracking-widest">Connect</h4>
-                <div class="flex space-x-4 mb-6">
-                    <a href="#" class="w-10 h-10 bg-white border border-slate-200 rounded-full flex items-center justify-center text-slate-500 hover:text-indigo-600 hover:border-indigo-100 transition">
-                        <i class="fab fa-twitter"></i>
-                    </a>
-                    <a href="#" class="w-10 h-10 bg-white border border-slate-200 rounded-full flex items-center justify-center text-slate-500 hover:text-indigo-600 hover:border-indigo-100 transition">
-                        <i class="fab fa-github"></i>
-                    </a>
+            <div class="border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-slate-500 text-sm">© 2026 Hivera AI. All rights reserved.</p>
+                <div class="flex space-x-6 mt-4 md:mt-0">
+                    <span class="text-slate-500 text-sm flex items-center gap-2">
+                        <span class="w-2 h-2 bg-green-500 rounded-full"></span>
+                        Systems Normal
+                    </span>
                 </div>
-                <p class="text-xs text-slate-500 font-medium">Support: <a href="mailto:support@hivera.digital" class="text-indigo-600 hover:underline">support@hivera.digital</a></p>
-            </div>
-        </div>
-        <div class="max-w-6xl mx-auto px-4 mt-16 pt-8 border-t border-slate-200 flex flex-col md:flex-row justify-between items-center text-xs text-slate-400 font-medium">
-            <p>&copy; 2026 Hivera. All rights reserved.</p>
-            <div class="flex space-x-6 mt-4 md:mt-0">
-                <a href="#" class="hover:text-slate-600">Privacy Policy</a>
-                <a href="#" class="hover:text-slate-600">Terms of Service</a>
             </div>
         </div>
     </footer>
 
-    <!-- Monetization Hub Script -->
-    <script>
-        // ROI Calculator Logic
-        const rateInput = document.getElementById('calc-rate');
-        const hoursInput = document.getElementById('calc-hours');
-        const resultDisplay = document.getElementById('calc-result');
-
-        function updateROI() {
-            const savings = rateInput.value * hoursInput.value * 52;
-            resultDisplay.innerText = '$' + savings.toLocaleString();
-        }
-
-        rateInput.addEventListener('input', updateROI);
-        hoursInput.addEventListener('input', updateROI);
-
-        // Affiliate Rotator Logic
-        const affiliates = [
-            { name: "Hivera Recs: Cursor Standard", url: "https://cursor.com/?ref=hivera" },
-            { name: "Hivera Recs: Copilot Pro", url: "https://github.com/copilot?ref=hivera" },
-            { name: "Hivera Recs: DigitalOcean AI", url: "https://digitalocean.com/ai?ref=hivera" },
-            { name: "Hivera Recs: Claude 4 API", url: "https://anthropic.com/claude?ref=hivera" }
-        ];
-
-        let currentIndex = 0;
-        const adDisplay = document.getElementById('affiliate-rotator-top');
-
-        function rotateAd() {
-            const ad = affiliates[currentIndex];
-            adDisplay.innerHTML = `<i class="fas fa-external-link-alt mr-2"></i> ${ad.name}`;
-            adDisplay.onclick = () => window.open(ad.url, '_blank');
-            currentIndex = (currentIndex + 1) % affiliates.length;
-        }
-
-        rotateAd();
-        setInterval(rotateAd, 5000);
-    </script>
 </body>
 </html>
