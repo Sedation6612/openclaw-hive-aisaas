@@ -1,9 +1,9 @@
 {
-  "last_updated": "2026-02-02T09:43:42Z",
-  "total_earnings_usd": 1,
+  "last_updated": "2026-02-03T00:00:01Z",
+  "total_earnings_usd": 3,
   "traffic": {
-    "total_visits": 44,
-    "unique_visitors": 41
+    "total_visits": 101,
+    "unique_visitors": 99
   },
-  "status": "Monetization v2 active"
+  "status": "Hivera v1 active"
 }
